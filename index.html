@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Modular Performance Dashboard</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <script
+        src="./data.js"
+        defer
+    ></script>
+</head>
+
+<body>
+
+    <header class="dashboard-header">
+        <h1>System Health Monitor</h1>
+
+        <div class="system-state">
+            <span class="status-indicator"></span>
+            <span>Operational</span>
+        </div>
+    </header>
+
+    <main class="dashboard">
+
+        <!-- Summary Cards -->
+
+        <section
+            class="card-grid"
+            aria-label="System Metrics"
+        >
+
+            <article class="metric-card">
+                <h2>Heart Rate</h2>
+                <p id="heartRate">-- BPM</p>
+            </article>
+
+            <article class="metric-card">
+                <h2>Blood Oxygen</h2>
+                <p id="oxygen">-- %</p>
+            </article>
+
+            <article class="metric-card">
+                <h2>Temperature</h2>
+                <p id="temperature">-- °C</p>
+            </article>
+
+            <article class="metric-card">
+                <h2>Battery</h2>
+                <p id="battery">-- %</p>
+            </article>
+
+            <article class="metric-card">
+                <h2>Latency</h2>
+                <p id="latency">-- ms</p>
+            </article>
+
+            <article class="metric-card">
+                <h2>Device Status</h2>
+                <p id="deviceStatus">--</p>
+            </article>
+
+        </section>
+
+        <!-- Future Chart Area -->
+
+        <section
+            class="panel"
+            aria-label="Telemetry Trends"
+        >
+            <h2>Telemetry Trends</h2>
+            <div class="placeholder">
+                Chart Integration Area
+            </div>
+        </section>
+
+        <!-- Future Event Logs -->
+
+        <section
+            class="panel"
+            aria-label="Event Logs"
+        >
+            <h2>Event Log</h2>
+
+            <ul
+                id="eventLog"
+                class="event-log"
+            >
+                <li>Awaiting events...</li>
+            </ul>
+        </section>
+
+    </main>
+
+</body>
+</html>

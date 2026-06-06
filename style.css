@@ -1,0 +1,171 @@
+html {
+    font-size: 100%;
+    /* Prevents layout shift during font loading */
+    text-size-adjust: 100%; 
+}
+:root {
+    --bg: #0f172a;
+    --surface: #1e293b;
+    --surface-hover: #26344a;
+
+    --text: #f8fafc;
+    --text-secondary: #94a3b8;
+
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+
+    --radius: 1rem;
+    --shadow:
+        0 10px 30px rgba(0, 0, 0, 0.2);
+    --max-width: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family:
+        Inter,
+        Segoe UI,
+        sans-serif;
+
+    background: var(--bg);
+    color: var(--text);
+
+    line-height: 1.5;
+}
+
+.dashboard-header {
+    max-width: var(--max-width);
+
+    margin-inline: auto;
+
+    padding: 1.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.system-state {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.status-indicator {
+
+    width:0.75rem;
+    
+    height:0.75rem;
+
+    border-radius: 50%;
+
+    background: var(--success);
+}
+
+.dashboard {
+    max-width: var(--max-width);
+
+    margin-inline: auto;
+
+    padding-block: 1rem 3rem;
+    
+    padding-inline: 1.5rem;
+
+    display: grid;
+    gap: 1.5rem;
+}
+
+.card-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(13.75rem, 1fr)
+        );
+
+    gap: 1rem;
+}
+
+.metric-card,
+.panel {
+    background: var(--surface);
+
+    border-radius: var(--radius);
+
+    padding: 1.25rem;
+
+    box-shadow: var(--shadow);
+}
+
+.metric-card {
+    transition: 
+       transform 150ms ease,
+       background 150ms ease;
+}
+
+.metric-card:hover {
+    /* Hint to the browser to promote this to a GPU layer */
+    will-change: transform;
+    transform: translateY(-2px);
+    background: var(--surface-hover);
+}
+
+.metric-card h2 {
+    margin-top: 0;
+
+    color: var(--text-secondary);
+
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.metric-card p {
+    margin-bottom: 0;
+
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.placeholder {
+    min-height: 13.75rem;
+
+    display: grid;
+    place-items: center;
+
+    color: var(--text-secondary);
+}
+
+.event-log {
+    margin: 0;
+    padding-left: 1rem;
+}
+
+.event-log li {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 43.75rem) {
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+}
