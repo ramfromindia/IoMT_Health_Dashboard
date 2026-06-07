@@ -1,0 +1,24 @@
+{
+  "name": "iomt-health-dashboard",
+  "version": "1.0.0",
+  "description": "IoMT Health Dashboard Application",
+  "main": "data.js",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [
+    "iot",
+    "health",
+    "dashboard"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.60.1",
+    "@typescript-eslint/parser": "^8.60.1",
+    "eslint": "^9.0.0",
+    "typescript": "^6.0.3"
+  }
+}

@@ -47,7 +47,7 @@ const dashboardState = {
 |--------------------------------------------------------------------------
 */
 
-const thresholds = {
+const _thresholds = {
     heartRate: {
         min: 60,
         max: 100
