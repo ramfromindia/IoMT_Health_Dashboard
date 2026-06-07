@@ -132,7 +132,6 @@ export default [
         }
     },
 
-    // ================================================================
     // BROWSER - TypeScript files (.ts, .tsx)
     // ================================================================
     {
@@ -154,7 +153,8 @@ export default [
             sourceType: "module",
             parser: tsParser,
             parserOptions: {
-                project: false
+                project: false,
+                lib: ["dom", "es2020"]
             },
             globals: browserGlobals
         },
