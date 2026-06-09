@@ -6,6 +6,15 @@
 |--------------------------------------------------------------------------
 */
 
+
+function getCurrentTimestamp() {
+    if (globalThis.Temporal) {
+        return globalThis.Temporal.Now.instant().epochMilliseconds;
+    }
+
+    return Date.now();
+}
+
 const devices = [
     {
         id: "IOMT-001",
@@ -25,7 +34,7 @@ const devices = [
 
         status: "ONLINE",
 
-        lastUpdated: Date.now()
+        lastUpdated: getCurrentTimestamp()
     }
 ];
 
